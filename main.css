@@ -1,0 +1,220 @@
+:root {
+    --background-color: #031827;
+    --border-color: #0D4D4A;
+    --text-color: white;
+    --highlight-color: #1D8685;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, a, p, span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;   
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav > .nav-section {
+    padding: 3rem 2rem;
+    display: flex;
+    gap: 1rem;
+    border-left: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-logo-section,
+#nav-link-section {
+    flex-basis: calc(100% / 3);
+}
+
+#nav-social-section,
+#nav-cantact-section {
+    flex-grow: 1;
+}
+
+#nav-logo-section {
+    justify-content: flex-start;
+    border: 0;
+}
+
+
+main {
+    flex-grow: 1;
+    position: relative;
+}
+
+main > article {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: transform 400ms ease; 
+}
+
+main > article[data-status="inactive"] {
+    transform: translateX(-100%);
+    transition: none;
+  }
+  
+  main > article[data-status="active"] {
+    transform: translateX(0%);
+  }
+  
+  main > article[data-status="before"] {
+    transform: translateX(-100%);
+  }
+  
+  main > article[data-status="after"] {
+    transform: translateX(100%);
+  }
+
+  main > article[data-status="becoming-active-from-before"] {
+    transform: translateX(-100%);
+    transition: none;
+  }
+  
+  main > article[data-status="becoming-active-from-after"] {
+    transform: translateX(100%);
+    transition: none;
+  }
+
+main > article > .article-section {
+    height: 100%;
+}
+
+main > article > .article-description-section,
+main > article > .article-nav-section {
+  border-left: 1px solid var(--border-color);
+}
+
+main > article > .article-title-section,
+main > article > .article-nav-section {
+  border-top: 1px solid var(--border-color);
+}
+
+main > article:first-child > .article-image-section {
+    background-image: url("./assets/SkillsNCoding.png");
+  }
+
+main > article:nth-child(2) > .article-image-section {
+    background-image: url("./assets/WebsiteSample.png");
+  }
+
+main > article:nth-child(3) > .article-image-section {
+    background-image: url("./assets/TicTacConstruction.png");
+  }
+
+main > article:nth-child(4) > .article-image-section {
+    background-image: url("./assets/JSportfolio.png");
+  }
+
+main > article:nth-child(4) > .article-image-section > .construction {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 75%;
+  }
+
+main > article > .article-image-section {
+    background-position: center;
+    background-size: cover;
+  }
+
+  main > article > .article-description-section {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem; 
+  }
+
+  main > article > .article-description-section > p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.25em;
+  }
+
+  main > article > .article-description-section > p  > a:hover {
+    text-decoration: underline;
+  }
+
+  main > article > .article-title-section {
+    align-items: center; 
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    width: 40%;
+  }
+  
+  main > article > .article-title-section * {
+    color: white;
+  }
+  
+  main > article > .article-title-section > h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5rem;
+    line-height: 3rem;
+    margin: 0px;
+    text-transform: uppercase;
+  }
+
+  main > article > .article-nav-section {
+    display: flex;
+  }
+  main > article > .article-nav-section > .article-nav-button {
+    background-color: transparent;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform .5s;
+  }
+  
+  main > article > .article-nav-section > .article-nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.02);  
+    transform:perspective()
+  }
+  
+
+  
+  main > article > .article-nav-section > .article-nav-button:nth-child(2) {
+    border-left: 1px solid var(--border-color);
+  }
+
+
+
+  .about-page {
+    opacity: 0;
+  }
+
+  html.is-animating .transition-fade {
+    opacity: 0;
+  }

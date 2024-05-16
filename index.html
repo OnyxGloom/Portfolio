@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css"/>
+    <script src="https://kit.fontawesome.com/3bffa9905a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script defer src="./node_modules/swup/dist/Swup.cjs"></script>
+</head>
+<body>
+
+    <nav>
+        <div id="nav-logo-section" class="nav-section">
+            <a href="#">
+                <i class="fa-solid fa-power-off"></i>
+            </a>
+        </div>
+        <div id="nav-link-section" class="nav-section">
+            <a href="#" onclick="openAbout()">ABOUT</a>
+            <a href="./index.html">WORK</a>
+        </div>
+        <div id="nav-social-section" class="nav-section">
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div id="nav-contact-section" class="nav-section">
+            <a href="#">CONTACT</a>
+        </div>
+    </nav>
+
+
+    <main>
+        <article data-index="0" data-status="active">
+            <div class="article-image-section article-section">
+            </div>
+            <div class="article-description-section article-section">
+                <p>The Skills Network Bootcamp is a dynamic level 3 software 
+                    development course covering the full Software Development 
+                    Life Cycle (SDLC) and multiple programming languages like 
+                    Python, HTML, CSS, and JavaScript. Culminating in a 
+                    real-life project and presentation, it bridges theory and 
+                    practice. For more information, visit 
+                    <a href="https://dfebootcamp.theskillsnetwork.com/courses/skills-bootcamp-software-development-w4">The Skills Network</a></p>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>Skills Network Bootcamp</h2>
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </article>
+        <article data-index="1" data-status="inactive">
+            <div class="article-image-section article-section">
+            </div>
+            <div class="article-description-section article-section">
+                <p>This is my section 2</p>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>Artist Portfolio</h2>
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </article>
+        <article data-index="2" data-status="inactive">
+            <div class="article-image-section article-section">
+            </div>
+            <div class="article-description-section article-section">
+                <p>This is my section3</p>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>Tic Tac Toe</h2>
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </article>
+        <article data-index="3" data-status="inactive">
+            <div class="article-image-section article-section">
+                <img class="construction" src="./assets/under_construction.png"/>
+            </div>
+            <div class="article-description-section article-section">
+                <p>This is my section4</p>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>2D Gamified Portfolio</h2>
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </article>
+    </main>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
