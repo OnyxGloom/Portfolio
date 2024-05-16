@@ -41,5 +41,16 @@ function moveToAbout() {
 
 const openAbout = () => {
 
-  setTimeout (moveToAbout, 5000)
+  const currentSlide = document.querySelector(`[data-status="active"]`)
+
+  const currentSlideIndex = currentSlide.dataset.index;
+
+  const currentArticleSectionLeft = document.querySelector(`[data-index="left"]`)
+
+  const currentArticleSectionRight = document.querySelector(`[data-index="right"]`)
+
+  currentArticleSectionLeft.dataset.status = "leave-left"
+  currentArticleSectionRight.dataset.status = "leave-right"
+  setTimeout (moveToAbout, 1500)
+
 }
