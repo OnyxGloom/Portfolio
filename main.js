@@ -35,8 +35,11 @@ const handleRightClick = () => {
     });
   }
   
+function moveToAbout() {
+  window.location.href ="./about.html"
+}
+
 const openAbout = () => {
 
-  
-    window.location.href ="./about.html"
+  setTimeout (moveToAbout, 5000)
 }
