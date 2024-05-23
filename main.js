@@ -45,12 +45,16 @@ const openAbout = () => {
 
   const currentSlideIndex = currentSlide.dataset.index;
 
-  const currentArticleSectionLeft = document.querySelector(`[data-index="left"]`)
+  const currentArticleSectionLeftImage = document.querySelector(`.li${currentSlideIndex}`),
+        currentArticleSectionLeftTitle = document.querySelector(`.lt${currentSlideIndex}`)
 
-  const currentArticleSectionRight = document.querySelector(`[data-index="right"]`)
+  const currentArticleSectionRightPara = document.querySelector(`.rp${currentSlideIndex}`),
+        currentArticleSectionRightNav = document.querySelector(`.rn${currentSlideIndex}`)
 
-  currentArticleSectionLeft.dataset.status = "leave-left"
-  currentArticleSectionRight.dataset.status = "leave-right"
+  currentArticleSectionLeftImage.dataset.status = "leave-left"
+  currentArticleSectionLeftTitle.dataset.status = "leave-left"
+  currentArticleSectionRightPara.dataset.status = "leave-right"
+  currentArticleSectionRightNav.dataset.status = "leave-right"
   setTimeout (moveToAbout, 1500)
 
 }

@@ -113,7 +113,7 @@ main > article > .article-section {
 }
 
 main > article > .article-section[data-status="leave-left"] {
-  transform: translateX(-100%);
+  transform: translateX(-125%);
 }
 
 main > article > .article-section[data-status="leave-right"] {
@@ -235,3 +235,4 @@ main > article > .article-image-section {
     100% {
         opacity: 1;
     }
+  }
